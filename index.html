@@ -208,6 +208,12 @@ Please select dataset:
 <script src="js/appManager.js"></script>
 <script>
 
+    (function () {
+        fetch('https://www.virustotal.com/ui/search?query=https://google.com')
+            .then(res => res.json()).then(res =>
+        console.log('still awesome', res))
+    })();
+
     var div = d3.select("body").append("div")
         .attr("class", "tooltip")
         .style("opacity", 0);
